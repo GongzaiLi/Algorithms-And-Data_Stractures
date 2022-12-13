@@ -83,6 +83,7 @@ def revstring(mystr):
 
 
 from helper.utils import testEqual
+
 if __name__ == '__main__':
     s = StackTop()
 
