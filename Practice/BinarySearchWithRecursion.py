@@ -6,10 +6,9 @@ def binary_search(items, target):
     low = 0
     high = len(items) - 1
 
-    while low <= high:
+    while low < high:
 
         mid = round((low + high) // 2)
-
 
         if target == items[mid]:
             return mid
@@ -39,11 +38,14 @@ def binary_search_recursion(items, target, low=0, high=None):
         high = mid
     else:
         low = mid
+
+    if low >= high:
+        return None
     return binary_search_recursion(items, target, low, high)
 
 
 if __name__ == '__main__':
-    #   issues: Cannot return None
+    #    issues: Cannot return None
     my_items = [1, 3, 5, 7, 9]
     print(binary_search(my_items, -1))
     # print(binary_search_recursion(my_items, -1))
