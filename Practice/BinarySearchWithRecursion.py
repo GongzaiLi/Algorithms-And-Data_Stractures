@@ -35,9 +35,9 @@ def binary_search_recursion(items, target, low=0, high=None):
         return mid
 
     if items[mid] > target:
-        high = mid
+        high = mid - 1
     else:
-        low = mid
+        low = mid + 1
 
     if low >= high:
         return None
